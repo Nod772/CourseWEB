@@ -1,0 +1,16 @@
+<div class="login-page">
+  <div class="form">
+    <h2>Sign Up</h2>
+    <form class="login-form" #myForm="ngForm" (ngSubmit)="register()">
+      <input [(ngModel)]="model.FullName" type="text" placeholder="Full name" name="FullName" />
+      <input [(ngModel)]="model.Email" type="text" placeholder="Email" name="Email" />
+      <input [(ngModel)]="model.Password" type="password" placeholder="Password" name="Password" />
+      <input [(ngModel)]="confirmPassword" type="password" placeholder="Confirm password" name="confirmPassword" />
+      <input [(ngModel)]="model.Phone" type="text" placeholder="Phone number" prefix='+38' mask='(000) 000-00-00'
+        name="PhoneNumber" />
+      <input [(ngModel)]="model.Address" type="text" placeholder="Address" name="Address" />
+      <button type="submit" class="btn btn-primary my-btn">Sign up</button>
+      <p class="message">Already a member? <a [routerLink]="['/sign-in']">Sign In</a></p>
+    </form>
+  </div>
+</div>

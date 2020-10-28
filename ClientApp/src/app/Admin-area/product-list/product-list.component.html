@@ -1,0 +1,15 @@
+<nz-table #myTable [nzData]="listOfData" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th *ngFor="let column of listOfColumn">{{column.title}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of myTable.data">
+      <td><img [src]="data.image" width="50"/></td>
+      <td>{{ data.title }}</td>
+      <td>{{ data.price }}</td>
+      <td>{{ data.description }}</td>
+    </tr>
+  </tbody>
+</nz-table>
